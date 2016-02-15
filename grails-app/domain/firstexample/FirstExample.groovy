@@ -3,7 +3,8 @@ package firstexample
 import metafunctionality.ModuleInput
 
 class FirstExample extends ModuleInput {
-
-    static hasMany = [words:String]
-    List words
+    String word
+    String answer
+    static hasMany = [rhymingCandidates:String]
+    List rhymingCandidates
 }

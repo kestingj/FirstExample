@@ -5,13 +5,14 @@
 </head>
 
 <body>
-<ul>
-    <g:each in="${lsOut}" var="it">
-        <li>${it}</li>
-    </g:each>
-</ul>
+<g:form params="[modID: modID]">
+    <label>Which of the following rhymes with ${word}?</label>
+    <g:radioGroup name="candidates"
+                  labels="${rc}"
+                  values="${rc}">
+        <p>${it.radio} ${it.label} </p>
+    </g:radioGroup>
 
-<g:form params="[words: lsOut, modID: modID]">
     <g:actionSubmit value="submit" />
 </g:form>
 </body>
