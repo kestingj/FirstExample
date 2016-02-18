@@ -42,10 +42,16 @@ class FirstExampleController {
             m.outputIDs = [output.moduleDataID]
         }
         output.type = "FirstExample"
+        m.isCompleted = true
         m.save(flush: true)
         output.save(flush: true)
+        render(view: "submit")
+        //redirect(controller: "appforliteracy.FileOutput", action: "output", params: [id: output.moduleDataID])
 
-        redirect(controller: "appforliteracy.FileOutput", action: "output", params: [id: output.moduleDataID])
+    }
+
+    def logout() {
+        redirect(controller:"Login", action:"index")
     }
 
 }

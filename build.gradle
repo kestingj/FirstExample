@@ -16,7 +16,7 @@ plugins {
     id "com.jfrog.bintray" version "1.2"
 }
 
-version "0.1"
+version "0.2"
 group "org.grails.plugins"
 
 apply plugin: 'maven-publish'
@@ -84,7 +84,7 @@ bintray {
         vcsUrl = "https://github.com/kestingj/grails-FirstExample"
         version {
             attributes = ['grails-plugin': "org.osread:FirstExample"]
-            name = 0.1
+            name = 0.2
         }
     }
 }
